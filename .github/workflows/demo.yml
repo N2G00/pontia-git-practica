@@ -1,0 +1,15 @@
+name: clase pontia actions github
+
+on:
+  workflow_dispatch:
+    inputs:
+      mensaje:
+        description:  'Entra el mensaje a imprimir'
+        required: true
+        type: string
+jobs:
+  imprimir-mensaje:
+    runs-on: ubuntu-latest
+    steps:
+      - name:  imprimir a la consola de usuario
+        run: echo "${{ inputs.mensaje }}"
